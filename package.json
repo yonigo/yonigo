@@ -1,0 +1,36 @@
+{
+  "name": "yonigo",
+  "version": "0.0.0",
+  "description": "Yoni Goyhman's Website & CMS",
+  "main": "server/websocket.js",
+  "dependencies": {
+    "crypto": "~0.0.3",
+    "mongoose": "~3.8.8",
+    "q": "~1.0.1",
+    "restify": "~2.7.0",
+    "socket.io": "~0.9.16"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yonigo/yonigo.git"
+  },
+  "keywords": [
+    "html5",
+    "node.js",
+    "mondoDB",
+    "angular",
+    "bootstrap",
+    "restify",
+    "less"
+  ],
+  "author": "Yoni Goyhman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yonigo/yonigo/issues"
+  },
+  "homepage": "https://github.com/yonigo/yonigo"
+}
