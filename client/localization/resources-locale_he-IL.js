@@ -1,0 +1,648 @@
+[
+  {
+    "description":"",
+    "value":"שם משתמש",
+    "key":"_userName_"
+  },
+  {
+    "description":"",
+    "value":"סיסמא",
+    "key":"_password_"
+  },
+  {
+    "description":"",
+    "value":"זכור אותי",
+    "key":"_rememberMe_"
+  },
+  {
+    "description":"",
+    "value":"התחבר",
+    "key":"_signIn_"
+  },
+  {
+    "description":"",
+    "value":"הרשם",
+    "key":"_register_"
+  },
+  {
+    "description":"",
+    "value":"משך פגישה",
+    "key":"_appointmentLength_"
+  },
+  {
+    "description":"",
+    "value":"שכחתי סיסמא",
+    "key":"_forgotPassword_"
+  },
+  {
+    "description":"",
+    "value":"טלפון",
+    "key":"_telephone_"
+  },
+  {
+    "description":"",
+    "value":"שלח",
+    "key":"_send_"
+  },
+  {
+    "description":"",
+    "value":"התחבר",
+    "key":"_login_"
+  },
+  {
+    "description":"",
+    "value":"קטגוריה",
+    "key":"_category_"
+  },
+  {
+    "description":"",
+    "value":"פרטי משתמש",
+    "key":"_userData_"
+  },
+  {
+    "description":"",
+    "value":"שם פרטי",
+    "key":"_firstName_"
+  },
+  {
+    "description":"",
+    "value":"שם משפחה",
+    "key":"_lastName_"
+  },
+  {
+    "description":"",
+    "value":"דוא\"ל",
+    "key":"_email_"
+  },
+  {
+    "description":"",
+    "value":"אמת סיסמא",
+    "key":"_confirmPassword_"
+  },
+  {
+    "description":"",
+    "value":"הגדרות",
+    "key":"_settings_"
+  },
+  {
+    "description":"",
+    "value":"שמור",
+    "key":"_save_"
+  },
+  {
+    "description":"",
+    "value":"ברירות מחדל",
+    "key":"_defaults_"
+  },
+  {
+    "description":"",
+    "value":"זמן התראה",
+    "key":"_defaultAlertTime_"
+  },
+  {
+    "description":"",
+    "value":"דק",
+    "key":"_minutesShort_"
+  },
+  {
+    "description":"",
+    "value":"שפה",
+    "key":"_language_"
+  },
+  {
+    "description":"",
+    "value":"אנגלית",
+    "key":"_english_"
+  },
+  {
+    "description":"",
+    "value":"עברית",
+    "key":"_hebrew_"
+  },
+  {
+    "description":"",
+    "value":"מ",
+    "key":"_from_"
+  },
+  {
+    "description":"",
+    "value":"עד",
+    "key":"_to_"
+  },
+  {
+    "description":"",
+    "value":"סיים",
+    "key":"_done_"
+  },
+  {
+    "description":"",
+    "value":"המשך",
+    "key":"_continue_"
+  },
+  {
+    "description":"",
+    "value":"לוח שנה",
+    "key":"_calendar_"
+  },
+  {
+    "description":"",
+    "value":"כרגע בטיפול",
+    "key":"_currentlyServed_"
+  },
+  {
+    "description":"",
+    "value":"ממתינים",
+    "key":"_totalWaiting_"
+  },
+  {
+    "description":"",
+    "value":"תאריך לידה",
+    "key":"_birthDate_"
+  },
+  {
+    "description":"",
+    "value":"זכר",
+    "key":"_male_"
+  },
+  {
+    "description":"",
+    "value":"נקבה",
+    "key":"_female_"
+  },
+  {
+    "description":"",
+    "value":"זמן התראה לפני פגישה",
+    "key":"_alertTime_"
+  },
+  {
+    "description":"",
+    "value":"עדכן",
+    "key":"_update_"
+  },
+  {
+    "description":"",
+    "value":"א",
+    "key":"_sun_"
+  },
+  {
+    "description":"",
+    "value":"ב",
+    "key":"_mon_"
+  },
+  {
+    "description":"",
+    "value":"ג",
+    "key":"_tue_"
+  },
+  {
+    "description":"",
+    "value":"ד",
+    "key":"_wed_"
+  },
+  {
+    "description":"",
+    "value":"ה",
+    "key":"_thu_"
+  },
+  {
+    "description":"",
+    "value":"ו",
+    "key":"_fri_"
+  },
+  {
+    "description":"",
+    "value":"ש",
+    "key":"_sat_"
+  },
+  {
+    "description":"",
+    "value":"אימות",
+    "key":"_verification_"
+  },
+  {
+    "description":"",
+    "value":"אמת",
+    "key":"_verify_"
+  },
+  {
+    "description":"",
+    "value":"קוד",
+    "key":"_code_"
+  },
+  {
+    "description":"",
+    "value":"הזן את הקוד כאן",
+    "key":"_pleaseEnterCode_"
+  },
+  {
+    "description":"",
+    "value":"קוד אימות",
+    "key":"_verificationCode_"
+  },
+  {
+    "description":"",
+    "value":"שלח שוב",
+    "key":"_resendCode_"
+  },
+  {
+    "description":"",
+    "value":"מידע נוסף",
+    "key":"_additionalInfo_"
+  },
+  {
+    "description":"",
+    "value":"הגדרות אפליקציה",
+    "key":"_appSettings_"
+  },
+  {
+    "description":"",
+    "value":"אזור",
+    "key":"_region_"
+  },
+  {
+    "description":"",
+    "value":"ישראל",
+    "key":"_israel_"
+  },
+  {
+    "description":"",
+    "value":"ארה\"ב",
+    "key":"_us_"
+  },
+  {
+    "description":"",
+    "value":"פגישות פעילות",
+    "key":"_activeAppointments_"
+  },
+  {
+    "description":"",
+    "value":"היסטוריה",
+    "key":"_history_"
+  },
+  {
+    "description":"",
+    "value":"פגישה חדשה",
+    "key":"_newAppointment_"
+  },
+  {
+    "description":"",
+    "value":"פרטי פגישה",
+    "key":"_appointmentDetails_"
+  },
+  {
+    "description":"",
+    "value":"בטל פגישה",
+    "key":"_cancelAppointment_"
+  },
+  {
+    "description":"",
+    "value":"עדכן פגישה",
+    "key":"_updateAppointment_"
+  },
+  {
+    "description":"",
+    "value":"תפריט",
+    "key":"_menu_"
+  },
+  {
+    "description":"",
+    "value":"פרופיל",
+    "key":"_profile_"
+  },
+  {
+    "description":"",
+    "value":"התנתק",
+    "key":"_logout_"
+  },
+  {
+    "description":"",
+    "value":"פעולות",
+    "key":"_actions_"
+  },
+  {
+    "description":"",
+    "value":"קבע פגישה",
+    "key":"_setAppointment_"
+  },
+  {
+    "description":"",
+    "value":"בחר תאריך",
+    "key":"_scheduleAppointment_"
+  },
+  {
+    "description":"",
+    "value":"קח מספר",
+    "key":"_getTicket_"
+  },
+  {
+    "description":"",
+    "value":"הפגישה הקרובה",
+    "key":"_closestAppointmentTime_"
+  },
+  {
+    "description":"",
+    "value":"סה\"כ ממתינים",
+    "key":"_totalPeopleWaiting_"
+  },
+  {
+    "description":"",
+    "value":"בחר שירות",
+    "key":"_selectService_"
+  },
+  {
+    "description":"",
+    "value":"נותני שירות",
+    "key":"_serviceProviders_"
+  },
+  {
+    "description":"",
+    "value":"בחר נותן שירות",
+    "key":"_selectServiceProvider_"
+  },
+  {
+    "description":"",
+    "value":"כתובת",
+    "key":"_address_"
+  },
+  {
+    "description":"",
+    "value":"מין",
+    "key":"_gender_"
+  },
+  {
+    "description":"",
+    "value":"פרטי משתמש",
+    "key":"_userDetails_"
+  },
+  {
+	"description":"time",
+    "value":" ?כבר רשום",
+    "key":"_alreadyMember_"
+  },
+  {
+	"description":"time",
+    "value":"חדש כאן?",
+    "key":"_newHere_"
+  },
+  {
+	"description":"time",
+    "value":"שלח סיסמא",
+    "key":"_sendPassword_"
+  },
+  {
+	"description":"time",
+    "value":"או",
+    "key":"_or_"
+  },
+  {
+	"description":"time",
+    "value":"הסיסמאות אינן זהות",
+    "key":"_passwordsMismatch_"
+  },
+  {
+	"description":"time",
+    "value":"הכנס כתובת דואר אלקטרוני תקינה",
+    "key":"_enterValidEmail_"
+  },
+  {
+	"description":"time",
+    "value":"קוד חדש נשלח אליך",
+    "key":"_newCodeSent_"
+  },
+  {
+	"description":"time",
+    "value":"פרטי המשתמש נשמרו",
+    "key":"_userDataSaved_"
+  },
+  {
+	"description":"time",
+    "value":"כל התורים הפנויים",
+    "key":"_allQueues_"
+  },
+  {
+	"description":"time",
+    "value":"הפגישה בוטלה",
+    "key":"_ticketCancelled_"
+  },
+  {
+	"description":"time",
+    "value":"מספר הטלפון כבר קיים במערכת",
+    "key":"_phoneExists_"
+  },
+  {
+	"description":"time",
+    "value":"שם המשתמש כבר קיים במערכת",
+    "key":"_userExists_"
+  },
+  {
+	"description":"time",
+    "value":"קוד שגוי",
+    "key":"_wrongCode_"
+  },
+  {
+	"description":"time",
+    "value":"סיסמא או שם מתשמש שגויים",
+    "key":"_userPasswordMismatch_"
+  },
+  {
+	"description":"time",
+    "value":"מצטערים, משהו השתבש",
+    "key":"_generalError_"
+  },
+  {
+	"description":"time",
+    "value":"השעה שנחברה תפוסה, אנא בחר שעה אחרת",
+    "key":"_alreadyTaken_"
+  },
+  {
+	    "description":"time",
+	    "value":"ינואר",
+	    "key":"_jan_"
+	  },
+	  {
+	    "description":"time",
+	    "value":"פברואר",
+	    "key":"_feb_"
+	  },
+	  {
+	    "description":"time",
+	    "value":"מרץ",
+	    "key":"_mar_"
+	  },
+	  {
+	    "description":"time",
+	    "value":"אפריל",
+	    "key":"_apr_"
+	  },
+	  {
+	    "description":"time",
+	    "value":"מאי",
+	    "key":"_may_"
+	  },
+	  {
+	    "description":"time",
+	    "value":"יוני",
+	    "key":"_jun_"
+	  },
+	  {
+	    "description":"time",
+	    "value":"יולי",
+	    "key":"_jul_"
+	  },
+	  {
+	    "description":"time",
+	    "value":"אוגוסט",
+	    "key":"_aug_"
+	  },
+	  {
+	    "description":"time",
+	    "value":"ספטמבר",
+	    "key":"_sep_"
+	  },
+	  {
+	    "description":"time",
+	    "value":"אוקטובר",
+	    "key":"_oct_"
+	  },
+	  {
+	    "description":"time",
+	    "value":"נובמבר",
+	    "key":"_nov_"
+	  },
+		{
+	    "description":"time",
+	    "value":"דצמבר",
+	    "key":"_dec_"
+	  },
+	  {
+	    "description":"time",
+	    "value":"א",
+	    "key":"_sunday_short_"
+	  }
+	  ,
+	  {
+	    "description":"time",
+	    "value":"ב",
+	    "key":"_monday_short_"
+	  }
+	  ,
+	  {
+	    "description":"time",
+	    "value":"ג",
+	    "key":"_tuesday_short_"
+	  }
+	  ,
+	  {
+	    "description":"time",
+	    "value":"ד",
+	    "key":"_wednesday_short_"
+	  }
+	  ,
+	  {
+	    "description":"time",
+	    "value":"ה",
+	    "key":"_thursday_short_"
+	  }
+	  ,
+	  {
+	    "description":"time",
+	    "value":"ו",
+	    "key":"_friday_short_"
+	  }
+	  ,
+	  {
+	    "description":"time",
+	    "value":"ש",
+	    "key":"_saturday_short_"
+	  }
+	  ,
+	  {
+	    "description":"time",
+	    "value":"הבא",
+	    "key":"_next_"
+	  }
+	  ,
+	  {
+	    "description":"time",
+	    "value":"אנא הזן סיסמא",
+	    "key":"_passwordMissing_"
+	  }
+	  ,
+	  {
+	    "description":"time",
+	    "value":"אנא הזן שם פרטי",
+	    "key":"_firstNameMissing_"
+	  }
+	  ,
+	  {
+	    "description":"time",
+	    "value":"אנא הזן שם משפחה",
+	    "key":"_lastNameMissing_"
+	  }
+	  ,
+	  {
+	    "description":"time",
+	    "value":"אנא הזן מספר טלפון",
+	    "key":"_phoneMissing_"
+	  }
+	  ,
+	  {
+	    "description":"time",
+	    "value":"צור קשר",
+	    "key":"_contactUs_"
+	  }
+	  ,
+	  {
+	    "description":"time",
+	    "value":"מצאת באג?<br> רוצה שנוסיף את העסק המועדף עליך לרשימה?<br> צור איתנו קשר!",
+	    "key":"_contactUsText_"
+	  }
+	  ,
+	  {
+	     "description":"FinishTicket",
+	     "value":"משך הזמן בדקות, <br> לפני הפגישה, <br>שבו תישלח הודעה <br>על מצב התור.",
+	     "key":"_alertTimeExpl_"
+	  }
+	  ,
+	  {
+	     "description":"FinishTicket",
+	     "value":"מספר אנשים לפניך",
+	     "key":"_totalPeopleWaitingBefore_"
+	  }
+	  ,
+	  {
+	     "description":"FinishTicket",
+	     "value":"זמן הכניסה שלך",
+	     "key":"_yourAppointmentTime_"
+	  }
+	  ,
+	  {
+	     "description":"FinishTicket",
+	     "value":"מספר ת.ז",
+	     "key":"_userId_"
+	  }
+	  ,
+	  {
+	     "description":"FinishTicket",
+	     "value":"עסק זה דורש את מספר תעודת הזהות שלך על מנת לקבוע פגישות",
+	     "key":"_userIdRequest_"
+	  }
+    ,
+    {
+        "description":"FinishTicket",
+        "value":"אין תאריכים פנויים לחודש זה",
+        "key":"_noOpenDays_"
+    }
+    ,
+    {
+        "description":"FinishTicket",
+        "value":"תעודת הזהות אינה תקינה",
+        "key":"_invalidId_"
+    }
+    ,
+    {
+        "description":"FinishTicket",
+        "value":"סניף זה לא מאפשר קביעת פגישות מרחוק.<br> לקביעת פגישה , צור קשר עם הסניף",
+        "key":"_BranchSchedulingNotAllowed_"
+    }
+]

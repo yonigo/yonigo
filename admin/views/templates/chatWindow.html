@@ -1,0 +1,25 @@
+<div class="chat-wrapper">
+    <div class="chat-header bg-primary" ng-click="toggleChatWindow()">
+        <div>{{header}}<span class="badge" data-ng-hide="chatWindowOpen || newMsgsCount == 0">{{newMsgsCount}}</span></div>
+
+    </div>
+    <div class="chat-body" ng-show="chatWindowOpen">
+        <div class="chat-text-window" >
+            <div ng-repeat="m in conversation.messages" class="chat-msg" ng-class="{delivered: m.status=='delivered'}" ng-style="{'direction':(m.user == $parent.$parent.appData.user.id)?'rtl':'ltr'}">
+                <div>
+                    <img ng-src="m.user.imageUrl" class="chat-msg-user-img" ng-show="m.user.imageUrl">
+                    <span class="glyphicon glyphicon-user" ng-hide="m.user.imageUrl"></span>
+                    <span class="chat-user-name" ng-hide="m.user.id">{{getUserName(m.user)}}</span>
+                </div>
+                <div>{{m.text}}</div>
+                <span class="glyphicon glyphicon-ok" data-ng-class="{'glyphicon-ok': m.status == 1, 'glyphicon-time': m.status == 0}" data-ng-show="m.status"></span>
+            </div>
+        </div>
+        <div class="chat-footer input-group">
+            <textarea class="form-control" ng-model="myNewMsg" ></textarea>
+             <span class="input-group-btn">
+                <button class="chat-submit-btn btn btn-info" ng-click="sendNewMsg()">send</button>
+             </span>
+        </div>
+    </div>
+</div>

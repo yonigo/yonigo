@@ -1,0 +1,170 @@
+@font: "Helvetica Neue",Helvetica,Arial,sans-serif;
+
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+
+* {
+  outline: none;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-user-select: none; /* Webkit */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none;     /* IE 10  */
+  -o-user-select: none;
+  user-select: none;
+  &:hover {
+    cursor: default;
+  }
+}
+
+.main-wrapper {
+  position: relative;
+}
+
+.section-wrapper {
+  padding-top: 50px;
+  padding-left: 30px;
+  padding-right:30px;
+}
+
+.vertical-divider {
+  width: 100%;
+  background-color: #aaa;
+  height: 1px;
+  margin: 20px 0px;
+}
+
+.users-navbar {
+  .glyphicon-user {
+    &:nth-last-child(2) {
+      position: relative;
+      top: -3px;
+      left: -5px;
+    }
+    &:nth-last-child(1) {
+      position: relative;
+      top: 1px;
+      left: -10px;
+    }
+  }
+}
+
+.chats-navbar {
+  .glyphicon-comment {
+    &:nth-last-child(2) {
+      position: relative;
+      top: -3px;
+      left: -5px;
+    }
+    &:nth-last-child(1) {
+      position: relative;
+      top: 1px;
+      left: -10px;
+    }
+  }
+}
+
+.login-form {
+  width: 300px;
+  margin-top: 3em;
+  button {
+    width: 300px;
+  }
+}
+
+.projects-empty {
+  margin-top: 40px;
+  width: 100%;
+  text-align: center;
+}
+
+//****** CHAT ******//
+
+.chat-wrapper {
+  width: 250px;
+  position: relative;
+  border:1px solid #eeeeee;
+  border-radius: 5px;
+}
+
+.chat-header {
+  heigth: 30px;
+  line-height: 30px;
+  padding: 0px 5px;
+  span {
+    background-color: red;
+  }
+}
+
+.chat-body {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.chat-text-window {
+  height: 300px;
+  overflow-x: auto;
+  padding: 5px;
+}
+
+.chat-footer {
+  width: 100%;
+  textarea {
+    height: 34px;
+  }
+  button {
+
+  }
+}
+
+// ***********  //
+
+.chats-active {
+  position: absolute;
+  left:0;
+  right:200px;
+}
+
+.chats-users {
+  position: absolute;
+  width: 200px;
+  right:0;
+  border-left: 1px solid #eeeeee;
+  h4 {
+    text-align: center;
+  }
+  & > div:first-child {
+    text-align: center;
+    font-size: 1.33em;
+    padding: 4px;
+    border-bottom: 1px solid #eeeeee;
+  }
+  .chat-user {
+    padding: 6px;
+  }
+}
+
+.chat-msg {
+  margin-top: 20px;
+  & > div {
+    position: relative;
+    display: inline-block;
+    img {
+      display: inline-block;
+    }
+    span {
+      display: inline-block;
+    }
+    span.chat-user-name {
+      font-size: 0.8em;
+      margin-top: -5px;
+      display: block;
+      position: absolute;
+    }
+  }
+  & > div:nth-child(2) {
+    margin: 0px 4px;
+  }
+  & > span:last-child {
+    float: left;
+  }
+}

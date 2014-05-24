@@ -1,0 +1,649 @@
+[
+  {
+    "description":"",
+    "value":"User Name",
+    "key":"_userName_"
+  },
+  {
+    "description":"",
+    "value":"Password",
+    "key":"_password_"
+  },
+  {
+    "description":"",
+    "value":"Remember me",
+    "key":"_rememberMe_"
+  },
+  {
+    "description":"",
+    "value":"Sign In",
+    "key":"_signIn_"
+  },
+  {
+    "description":"",
+    "value":"Register",
+    "key":"_register_"
+  },
+  {
+    "description":"",
+    "value":"Forgot password",
+    "key":"_forgotPassword_"
+  },
+  {
+    "description":"",
+    "value":"Telephone",
+    "key":"_telephone_"
+  },
+  {
+    "description":"",
+    "value":"Send",
+    "key":"_send_"
+  },
+  {
+    "description":"",
+    "value":"Login",
+    "key":"_login_"
+  },
+  {
+    "description":"",
+    "value":"Category",
+    "key":"_category_"
+  },
+  {
+    "description":"",
+    "value":"User Data",
+    "key":"_userData_"
+  },
+  {
+    "description":"",
+    "value":"First Name",
+    "key":"_firstName_"
+  },
+  {
+    "description":"",
+    "value":"Last Name",
+    "key":"_lastName_"
+  },
+  {
+    "description":"",
+    "value":"Email",
+    "key":"_email_"
+  },
+  {
+    "description":"",
+    "value":"Confirm Password",
+    "key":"_confirmPassword_"
+  },
+  {
+    "description":"",
+    "value":"Settings",
+    "key":"_settings_"
+  },
+  {
+    "description":"",
+    "value":"Save",
+    "key":"_save_"
+  },
+  {
+    "description":"",
+    "value":"Defaults",
+    "key":"_defaults_"
+  },
+  {
+    "description":"",
+    "value":"Default Alert Time",
+    "key":"_defaultAlertTime_"
+  },
+  {
+    "description":"",
+    "value":"min",
+    "key":"_minutesShort_"
+  },
+  ,
+  {
+    "description":"",
+    "value":"Appointment Length",
+    "key":"_appointmentLength_"
+  },
+  {
+    "description":"",
+    "value":"Language",
+    "key":"_language_"
+  },
+  {
+    "description":"",
+    "value":"English",
+    "key":"_english_"
+  },
+  {
+    "description":"",
+    "value":"Hebrew",
+    "key":"_hebrew_"
+  },
+  {
+    "description":"",
+    "value":"From",
+    "key":"_from_"
+  },
+  {
+    "description":"",
+    "value":"To",
+    "key":"_to_"
+  },
+  {
+    "description":"",
+    "value":"Done",
+    "key":"_done_"
+  },
+  {
+    "description":"",
+    "value":"Continue",
+    "key":"_continue_"
+  },
+  {
+    "description":"",
+    "value":"Calendar",
+    "key":"_calendar_"
+  },
+  {
+    "description":"",
+    "value":"Currently Served",
+    "key":"_currentlyServed_"
+  },
+  {
+    "description":"",
+    "value":"Total Waiting",
+    "key":"_totalWaiting_"
+  },
+  {
+    "description":"",
+    "value":"Birth Date",
+    "key":"_birthDate_"
+  },
+  {
+    "description":"",
+    "value":"Male",
+    "key":"_male_"
+  },
+  {
+    "description":"",
+    "value":"Female",
+    "key":"_female_"
+  },
+  {
+    "description":"",
+    "value":"Alert Time Before Appointment",
+    "key":"_alertTime_"
+  },
+  {
+    "description":"",
+    "value":"Update",
+    "key":"_update_"
+  },
+  {
+    "description":"",
+    "value":"Sun",
+    "key":"_sun_"
+  },
+  {
+    "description":"",
+    "value":"Mon",
+    "key":"_mon_"
+  },
+  {
+    "description":"",
+    "value":"Tue",
+    "key":"_tue_"
+  },
+  {
+    "description":"",
+    "value":"Wed",
+    "key":"_wed_"
+  },
+  {
+    "description":"",
+    "value":"Thu",
+    "key":"_thu_"
+  },
+  {
+    "description":"",
+    "value":"Fri",
+    "key":"_fri_"
+  },
+  {
+    "description":"",
+    "value":"Sat",
+    "key":"_sat_"
+  },
+  {
+    "description":"",
+    "value":"Verification",
+    "key":"_verification_"
+  },
+  {
+    "description":"",
+    "value":"Verify",
+    "key":"_verify_"
+  },
+  {
+    "description":"",
+    "value":"Code",
+    "key":"_code_"
+  },
+  {
+    "description":"",
+    "value":"Enter Your Code Here",
+    "key":"_pleaseEnterCode_"
+  },
+  {
+    "description":"",
+    "value":"Verification Code",
+    "key":"_verificationCode_"
+  },
+  {
+    "description":"",
+    "value":"Resend Code",
+    "key":"_resendCode_"
+  },
+  {
+    "description":"",
+    "value":"Additional Information",
+    "key":"_additionalInfo_"
+  },
+  {
+    "description":"",
+    "value":"Application Settings",
+    "key":"_appSettings_"
+  },
+  {
+    "description":"",
+    "value":"Region",
+    "key":"_region_"
+  },
+  {
+    "description":"",
+    "value":"Israel",
+    "key":"_israel_"
+  },
+  {
+    "description":"",
+    "value":"US",
+    "key":"_us_"
+  },
+  {
+    "description":"",
+    "value":"Active Appointments",
+    "key":"_activeAppointments_"
+  },
+  {
+    "description":"",
+    "value":"History",
+    "key":"_history_"
+  },
+  {
+    "description":"",
+    "value":"New Appointment",
+    "key":"_newAppointment_"
+  },
+  {
+    "description":"",
+    "value":"Appointment Details",
+    "key":"_appointmentDetails_"
+  },
+  {
+    "description":"",
+    "value":"Cancel Appointment",
+    "key":"_cancelAppointment_"
+  },
+  {
+    "description":"",
+    "value":"Update Appointment",
+    "key":"_updateAppointment_"
+  },
+  {
+    "description":"",
+    "value":"Menu",
+    "key":"_menu_"
+  },
+  {
+    "description":"",
+    "value":"Profile",
+    "key":"_profile_"
+  },
+  {
+    "description":"",
+    "value":"Logout",
+    "key":"_logout_"
+  },
+  {
+    "description":"",
+    "value":"Actions",
+    "key":"_actions_"
+  },
+  {
+    "description":"",
+    "value":"Set Appointment",
+    "key":"_setAppointment_"
+  },
+  {
+    "description":"",
+    "value":"Schedule Appointment",
+    "key":"_scheduleAppointment_"
+  },
+  {
+    "description":"",
+    "value":"Get Ticket",
+    "key":"_getTicket_"
+  },
+  {
+    "description":"",
+    "value":"Closest Appointment Time",
+    "key":"_closestAppointmentTime_"
+  },
+  {
+    "description":"",
+    "value":"Total People Waiting",
+    "key":"_totalPeopleWaiting_"
+  },
+  {
+    "description":"",
+    "value":"Select Service",
+    "key":"_selectService_"
+  },
+  {
+    "description":"",
+    "value":"Service Providers",
+    "key":"_serviceProviders_"
+  },
+  {
+    "description":"",
+    "value":"Select Servie Provider",
+    "key":"_selectServiceProvider_"
+  },
+  {
+    "description":"",
+    "value":"Gender",
+    "key":"_gender_"
+  },
+  {
+    "description":"",
+    "value":"User Details",
+    "key":"_userDetails_"
+  },
+  {
+    "description":"",
+    "value":"Address",
+    "key":"_address_"
+  },
+  {
+	"description":"time",
+    "value":"Already a member?",
+    "key":"_alreadyMember_"
+  },
+  {
+	"description":"time",
+    "value":"New Here?",
+    "key":"_newHere_"
+  },
+  {
+	"description":"time",
+    "value":"Send Password",
+    "key":"_sendPassword_"
+  },
+  {
+	"description":"time",
+    "value":"OR",
+    "key":"_or_"
+  },
+  {
+	"description":"time",
+    "value":"Passwords don't match",
+    "key":"_passwordsMismatch_"
+  },
+  {
+	"description":"time",
+    "value":"Enter a valid email address",
+    "key":"_enterValidEmail_"
+  },
+  {
+	"description":"time",
+    "value":"A new code has been sent to you",
+    "key":"_newCodeSent_"
+  },
+  {
+	"description":"time",
+    "value":"Your user data has been saved",
+    "key":"_userDataSaved_"
+  },
+  {
+	"description":"time",
+    "value":"All Available Queues",
+    "key":"_allQueues_"
+  },
+  {
+	"description":"time",
+    "value":"Ticket cancelled",
+    "key":"_ticketCancelled_"
+  },
+  {
+	"description":"time",
+    "value":"Phone number already exists",
+    "key":"_phoneExists_"
+  },
+  {
+	"description":"time",
+    "value":"User name already exists",
+    "key":"_userExists_"
+  },
+  {
+	"description":"time",
+    "value":"Code Incorrect",
+    "key":"_wrongCode_"
+  },
+  {
+	"description":"time",
+    "value":"Wrong user name or password",
+    "key":"_userPasswordMismatch_"
+  },
+  {
+	"description":"time",
+    "value":"Sorry, something went wrong..",
+    "key":"_generalError_"
+  },
+  {
+	"description":"time",
+    "value":"Slot taken, please choose a different one",
+    "key":"_alreadyTaken_"
+  },
+  {
+    "description":"time",
+    "value":"January",
+    "key":"_jan_"
+  },
+  {
+    "description":"time",
+    "value":"February",
+    "key":"_feb_"
+  },
+  {
+    "description":"time",
+    "value":"March",
+    "key":"_mar_"
+  },
+  {
+    "description":"time",
+    "value":"April",
+    "key":"_apr_"
+  },
+  {
+    "description":"time",
+    "value":"May",
+    "key":"_may_"
+  },
+  {
+    "description":"time",
+    "value":"June",
+    "key":"_jun_"
+  },
+  {
+    "description":"time",
+    "value":"July",
+    "key":"_jul_"
+  },
+  {
+    "description":"time",
+    "value":"August",
+    "key":"_aug_"
+  },
+  {
+    "description":"time",
+    "value":"September",
+    "key":"_sep_"
+  },
+  {
+    "description":"time",
+    "value":"October",
+    "key":"_oct_"
+  },
+  {
+    "description":"time",
+    "value":"November",
+    "key":"_nov_"
+  },
+	{
+    "description":"time",
+    "value":"December",
+    "key":"_dec_"
+  },
+  {
+    "description":"time",
+    "value":"S",
+    "key":"_sunday_short_"
+  }
+  ,
+  {
+    "description":"time",
+    "value":"M",
+    "key":"_monday_short_"
+  }
+  ,
+  {
+    "description":"time",
+    "value":"T",
+    "key":"_tuesday_short_"
+  }
+  ,
+  {
+    "description":"time",
+    "value":"W",
+    "key":"_wednesday_short_"
+  }
+  ,
+  {
+    "description":"time",
+    "value":"T",
+    "key":"_thursday_short_"
+  }
+  ,
+  {
+    "description":"time",
+    "value":"F",
+    "key":"_friday_short_"
+  }
+  ,
+  {
+    "description":"time",
+    "value":"S",
+    "key":"_saturday_short_"
+  }
+  ,
+  {
+    "description":"time",
+    "value":"next",
+    "key":"_next_"
+  }
+  ,
+  {
+    "description":"time",
+    "value":"Please enter a password",
+    "key":"_passwordMissing_"
+  }
+  ,
+  {
+    "description":"time",
+    "value":"Please enter your first name",
+    "key":"_firstNameMissing_"
+  }
+  ,
+  {
+    "description":"time",
+    "value":"please enter your last name",
+    "key":"_lastNameMissing_"
+  }
+  ,
+  {
+    "description":"time",
+    "value":"Please enter your phone number",
+    "key":"_phoneMissing_"
+  }
+  ,
+  {
+    "description":"time",
+    "value":"Contact Us",
+    "key":"_contactUs_"
+  }
+  ,
+  {
+    "description":"time",
+    "value":"Found a bug?<br> Want us to add your favorite business to the list?<br> Contact us and let us know what you think!",
+    "key":"_contactUsText_"
+  }
+  ,
+  {
+     "description":"FinishTicket",
+     "value":"The amount of time in minutes before an appointment when a notification regarding its status will be sent to you.",
+     "key":"_alertTimeExpl_"
+  }
+  ,
+  {
+     "description":"FinishTicket",
+     "value":"People Before You",
+     "key":"_totalPeopleWaitingBefore_"
+  }
+  ,
+  {
+     "description":"FinishTicket",
+     "value":"Your Entry Time",
+     "key":"_yourAppointmentTime_"
+  }
+  ,
+  {
+     "description":"FinishTicket",
+     "value":"Social Security Number",
+     "key":"_userId_"
+  }
+  ,
+  {
+     "description":"FinishTicket",
+     "value":"This business requires your social security number to schedule appointments",
+     "key":"_userIdRequest_"
+  }
+    ,
+    {
+        "description":"FinishTicket",
+        "value":"No Available dates for this month",
+        "key":"_noOpenDays_"
+    }
+    ,
+    {
+        "description":"FinishTicket",
+        "value":"Invalid Id number",
+        "key":"_invalidId_"
+    }
+    ,
+    {
+        "description":"FinishTicket",
+        "value": "This Branch Does Not Allow Client Scheduling.<br>Please Contact The Business To Schedule An Appointment.",
+        "key":"_BranchSchedulingNotAllowed_"
+    }
+]

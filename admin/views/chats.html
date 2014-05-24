@@ -1,0 +1,31 @@
+<div data-role="content" ng-init="init()" >
+
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation" ng-include src="'views/templates/header.html'"></nav>
+
+    <section class="section-wrapper" style="padding-left: 0; padding-right: 0;">
+
+        <div class="chats-active" scroll-fill="50">
+            <div class="chats-empty" ng-show="!appData.conversations || appData.conversations.length == 0">
+                <h2>No Available Chats</h2>
+            </div>
+
+            <div ng-show="appData.conversations && appData.conversations.length > 0">
+                <div data-ng-repeat="conversation in appData.conversations" chat-window conversation="conversation" on-msg-send="sendMsg(msg, conv)">
+                </div>
+            </div>
+        </div>
+
+        <div class="chats-users" scroll-fill="50">
+            <div>
+                <div>Online Users</div>
+            </div>
+            <div data-ng-show="!appData.onlineUsers || appData.onlineUsers.length == 0">
+                <h4>No Available Users</h4>
+            </div>
+            <div class="chat-user bg-info"  data-ng-repeat="u in appData.onlineUsers" data-ng-click="startNewConversation(u)"><span class="glyphicon glyphicon-user"></span> {{u.username}}</div>
+        </div>
+
+    </section>
+
+</div>
+

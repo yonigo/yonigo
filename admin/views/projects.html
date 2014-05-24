@@ -1,0 +1,32 @@
+<div data-role="content" ng-init="init()" >
+
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation" ng-include src="'views/templates/header.html'"></nav>
+
+    <section class="section-wrapper">
+
+        <div class="projects-empty" ng-hide="!appData.projects || appData.projects.length > 0">
+            <h2>No Available Projects</h2>
+        </div>
+
+        <div ng-show="appData.projects && appData.projects.length > 0">
+            <div data-ng-repeat="p in appData.projects">
+                {{p.name}}  {{p.id}}
+                <button type="submit" class="btn btn-success btn-default" data-ng-click="deleteProject(p)"><span class="glyphicon glyphicon-minus"></span> Delete</button>
+            </div>
+        </div>
+
+        <div class="vertical-divider"></div>
+
+        <div>
+            <form data-role="form" class="form-inline">
+                <div class="form-group">
+                    <label>Add New Project: </label>
+                    <input type="text" class="form-control" placeholder="Project Name" data-ng-model="newProjectName">
+                </div>
+                <button type="submit" class="btn btn-success btn-default" data-ng-click="addProject()"><span class="glyphicon glyphicon-plus"></span> Add</button>
+            </form>
+        </div>
+    </section>
+
+</div>
+

@@ -1,0 +1,16 @@
+<div class="chat-header" ng-click="toggleChatWindow()">
+    <div>{{header}}</div>
+    <div class="chat-new-msg-ind">{{newMsgsCount}}</div>
+    <button class="close-btn" ng-click="toggleChatWindow()" ng-show="chatWindowOpen"></button>
+</div>
+<div class="chat-window-body" ng-show="chatWindowOpen">
+    <div ng-repeat="m in conversation.messages" class="chat-msg" ng-class="{delivered: m.status=='delivered'}">
+        <img ng-src="m.user.imageUrl" class="chat-msg-user-img">
+        <div>{{m.text}}</div>
+        <img ng-src="m.status + 'Msg.png'" class="chat-msg-status-img">
+    </div>
+    <div class="chat-footer">
+        <input type="text" ng-model="myNewMsg" >
+        <button class="chat-submit-btn" ng-click="sendNewMsg()">send</button>
+    </div>
+</div>

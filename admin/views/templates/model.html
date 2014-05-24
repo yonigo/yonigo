@@ -1,0 +1,11 @@
+<div class="modal-header">
+    <h3 class="modal-title">{{config.title}}</h3>
+</div>
+<div class="modal-body">
+    <div ng-repeat="item in config.items">
+        <p>{{ item }}</p>
+    </div>
+</div>
+<div class="modal-footer">
+    <button ng-repeat="b in config.buttons" class="btn {{b.cls}}"  ng-click="runFunction(b.func)">{{b.label}}</button>
+</div>
