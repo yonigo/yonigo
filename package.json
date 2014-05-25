@@ -2,7 +2,7 @@
   "name": "yonigo",
   "version": "0.0.0",
   "description": "Yoni Goyhman's Website & CMS",
-  "main": "client/index.html",
+  "main": "/client/index.html",
   "dependencies": {
     "crypto": "0.0.3",
     "mongoose": "~3.8.11",

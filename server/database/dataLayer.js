@@ -9,7 +9,7 @@ db.once('open', function callback () {
 });
 //mongoose.connect('mongodb://localhost/' + dbCondfig.name);
 //mongoose.connect('mongodb://yoni.go@gmail.com:heroku_app25611764@ds053168.mongolab.com:53168/heroku_app25611764?keepAlive=1'); //, { keepAlive: 1 }?&connectTimeoutMS=300000
-mongoose.connect('mongodb://yonigo:Boldie44mongohq@oceanic.mongohq.com:10032/app25611764');
+mongoose.connect(process.env.MONGOHQ_URL || 'mongodb://localhost/' + dbCondfig.name);//'mongodb://yonigo:Boldie44mongohq@oceanic.mongohq.com:10032/app25611764');
 var GenericModel = function(modelName) {
 
     this.modelName = modelName;
