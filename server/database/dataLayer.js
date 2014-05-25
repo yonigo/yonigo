@@ -1,6 +1,5 @@
 var mongoose = require('mongoose');
 var dbCondfig = require('./../config/dataBase');
-    //User = require('./models/user');
 var db = mongoose.connection;
 var q = require('q');
 
@@ -8,9 +7,9 @@ db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function callback () {
     console.log("Connected To Db " + dbCondfig.name);
 });
-mongoose.connect('mongodb://localhost/' + dbCondfig.name);
-
-
+//mongoose.connect('mongodb://localhost/' + dbCondfig.name);
+//mongoose.connect('mongodb://yoni.go@gmail.com:heroku_app25611764@ds053168.mongolab.com:53168/heroku_app25611764?keepAlive=1'); //, { keepAlive: 1 }?&connectTimeoutMS=300000
+mongoose.connect('mongodb://yonigo:Boldie44mongohq@oceanic.mongohq.com:10032/app25611764');
 var GenericModel = function(modelName) {
 
     this.modelName = modelName;
