@@ -20,7 +20,7 @@ angular.module('serverConnection', [])
             connectToSocket: function(user) {
 
                 var deferred = $q.defer();
-                connection.socket = io.connect('http://localhost:8080',{
+                connection.socket = io.connect('http://www.yonigo.mobi:8080',{
                     query: $.param({token: 'ec210b70-e187-11e3-8b68-0800200c9a66'})
                 });
                 var socket = connection.socket;
