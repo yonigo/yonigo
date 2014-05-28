@@ -39,8 +39,11 @@ YoniGo.controller( 'chatsCtrl', function($scope, $state, $location, localize, se
         });
     };
 
-    $scope.sendMsg = function(msg, conv) {
-        return serverConnection.sendMsg(conv, $scope.appData.user, msg);
+    $scope.sendMsg = function(msg, conv, isFile) {
+        if (isFile)
+            return serverConnection.sendFile(conv, $scope.appData.user, msg);
+        else
+            return serverConnection.sendMsg(conv, $scope.appData.user, msg);
     };
 
     $scope.$on('onlineUsers', function(event, users) {

@@ -4,6 +4,7 @@ var dl = require('./database/dataLayer');
 var server = restify.createServer();
 var io = socketio.listen(server);
 var q = require('q');
+var fs = require('fs');
 
 server.use(restify.bodyParser());
 server.use( restify.CORS( {origins: ['*']}) );
@@ -129,6 +130,56 @@ server.post('/conversation/send', function create(req, res, next) {
         }
     });
 });
+
+server.post('/conversation/uploadFile', function create(req, res, next) {
+    var fileStr = req.body.data;
+    var fileName = req.body.name;
+    fs.writeFile(fileName,fileStr, function(err) {
+        if(err) {
+            res.send(500, error);
+            return next();
+        } else {
+            console.log("The file was saved!");
+            res.send(200, fileName);
+            return next();
+        }
+    });
+});
+
+server.post('/conversation/sendFile', function create(req, res, next) {
+    var fileStr = req.body.data;
+    var fileName = req.body.name;
+    var query = dl.conversation.instance.findOne({'_id': req.body.conversationId}).populate('users');
+    query.exec(function (err, conversation) {
+        if (err) {
+            res.send(500, error);
+            return next();
+        }
+        else {
+            conversation.addMsg(req.body.msg, req.body.user,function(err, conv, index) {
+                if (err) {
+                    res.send(500, error);
+                    return next();
+                }
+                res.send(200, index);
+                notifyMsg(conv);
+                return next();
+            });
+        }
+    });
+    fs.writeFile(fileName,fileStr, function(err) {
+        if(err) {
+            res.send(500, error);
+            return next();
+        } else {
+            console.log("The file was saved!");
+            res.send(200, fileName);
+            return next();
+        }
+    });
+});
+
+
 
 server.post('/project/delete', function create(req, res, next) {
     dl.project.delete(req.body.id).then( function( response) {

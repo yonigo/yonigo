@@ -108,13 +108,43 @@ angular.module('directives', ['localization'])
                 $timeout( function() {
                     $(element.find('.chat-text-window')).animate({ scrollTop: element.find('.chat-text-window')[0].scrollHeight},0);
                 }, 10);
-                scope.onMsgSend({msg: newMsg, conv: scope.conversation}).then( function(index) {
+                scope.onMsgSend({msg: newMsg, conv: scope.conversation, isFile: false}).then( function(index) {
                     newMsg.index = index;
                     newMsg.status = 1; //send
                 }, function( error) {
                     newMsg.status = 2;  //failed
                 });
                 scope.myNewMsg = '';
+            };
+
+            scope.onFileChanged = function(data, name) {
+                scope.newFile = data;
+                var newMsg = {
+                    text: scope.myNewMsg,
+                    status: 0, //undelivered
+                    user: scope.$parent.appData.user.id
+                };
+                scope.conversation.messages.push(newMsg);
+                $timeout( function() {
+                    $(element.find('.chat-text-window')).animate({ scrollTop: element.find('.chat-text-window')[0].scrollHeight},0);
+                }, 10);
+                scope.onMsgSend({msg: {data: data, name: name}, conv: scope.conversation, isFile: true}).then( function(index) {
+                    newMsg.index = index;
+                    newMsg.status = 1; //send
+                }, function( error) {
+                    newMsg.status = 2;  //failed
+                });
+
+                scope.newFile = null;
+
+                setSaveFile(name, data);
+                function setSaveFile(name, data) {
+                    var a = document.getElementById('save');
+                    if (name)
+                        a.setAttribute('download', name);
+                    a.href = data;
+                }
+
             };
 
             scope.getUserName = function(id) {
@@ -138,8 +168,39 @@ angular.module('directives', ['localization'])
                             scope.header = scope.header + ' ' + user.username;
                     })
 
+                    $timeout( function() {
+                        $(element.find('.chat-text-window')).animate({ scrollTop: element.find('.chat-text-window')[0].scrollHeight},0);
+                    }, 10);
+
                 }
             }, true);
         }
     };
-}]);
+}])
+.directive('fileUploader', function () {
+    'use strict';
+    return {
+        restrict: 'A',
+        scope: {
+            onFileChanged: '&'
+        },
+        link: function postLink(scope, element, attrs) {
+
+            element.bind('change', function (event) {
+                var reader = new FileReader();
+                var fileName = event.target.files[0].name;
+                reader.onload = function(theFile) {
+                    debugger;
+                    var fileStr;
+                    if (theFile.srcElement)
+                        fileStr = theFile.srcElement.result;
+                    else if (theFile.originalTarget)
+                        fileStr = theFile.originalTarget.result;
+                    scope.onFileChanged({data: fileStr, name: fileName});
+                    $('#previewImg').attr('src',fileStr);
+                };
+                reader.readAsDataURL(event.target.files[0]);
+            });
+        }
+    };
+});

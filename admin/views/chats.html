@@ -10,7 +10,7 @@
             </div>
 
             <div ng-show="appData.conversations && appData.conversations.length > 0">
-                <div data-ng-repeat="conversation in appData.conversations" chat-window conversation="conversation" on-msg-send="sendMsg(msg, conv)">
+                <div data-ng-repeat="conversation in appData.conversations" chat-window conversation="conversation" on-msg-send="sendMsg(msg, conv, isFile)">
                 </div>
             </div>
         </div>

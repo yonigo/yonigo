@@ -12,14 +12,19 @@
                     <span class="chat-user-name" ng-hide="m.user.id">{{getUserName(m.user)}}</span>
                 </div>
                 <div>{{m.text}}</div>
+                <a download="{{m.file.name}}" href="{{m.file.data}}" data-ng-show="m.file">{{m.file.name}}</a>
                 <span class="glyphicon glyphicon-ok" data-ng-class="{'glyphicon-ok': m.status == 1, 'glyphicon-time': m.status == 0}" data-ng-show="m.status"></span>
             </div>
         </div>
         <div class="chat-footer input-group">
-            <textarea class="form-control" ng-model="myNewMsg" ></textarea>
-             <span class="input-group-btn">
-                <button class="chat-submit-btn btn btn-info" ng-click="sendNewMsg()">send</button>
-             </span>
+            <form class="">
+                <div class="file-uploader">
+                    <input type="file" file-uploader on-file-changed="onFileChanged(data, name)" class="">
+                    <span class="glyphicon glyphicon-paperclip"></span>
+                </div>
+                <textarea class="" ng-model="myNewMsg" ></textarea>
+                <input class="chat-submit-btn btn btn-info form-control" ng-click="sendNewMsg()" type="submit" value="Send">
+            </form>
         </div>
     </div>
 </div>

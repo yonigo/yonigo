@@ -102,6 +102,10 @@ angular.module('serverConnection', [])
                 return this.sendHttp('send', {conversationId: conversation.id, user: {id: user.id}, msg: msg}, connection.url + 'conversation/');
             },
 
+            sendFile: function(conversation, user, file) {
+                return this.sendHttp('uploadFile', file, connection.url + 'conversation/');
+            },
+
             contactUs: function() {
                 connection.socket.emit('contactUs', {email: email, msg: msg, fullName: fullName})
             },

@@ -108,11 +108,40 @@
 
 .chat-footer {
   width: 100%;
+  position: relative;
+  div.file-uploader {
+    position: absolute;
+    width: 29px;
+    overflow: hidden;
+    height: 34px !important;
+    input {
+      display: block !important;
+      width: 29px !important;
+      height: 34px !important;
+      opacity: 0 !important;
+      overflow: hidden !important;
+    }
+    span {
+      position: absolute;
+      top: 8px;
+      left: 8px;
+    }
+    &:active {
+      background-color: #eee;
+    }
+  }
   textarea {
     height: 34px;
+    width: 158px;
+    margin-left: 30px;
+    border: 1px solid #eee;
+    margin-bottom: -6px;
   }
-  button {
-
+  input[type="submit"] {
+    position: absolute;
+    width: 60px;
+    right: 0;
+    top: 0;
   }
 }
 

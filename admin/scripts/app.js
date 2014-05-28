@@ -108,6 +108,13 @@ YoniGo
         debugger;
         switch (data.event) {
             case 'newMsg':
+                for (var i = 0; i < $scope.appData.conversations.length; i++) {
+                    if ($scope.appData.conversations[i].id == JSON.parse(data.data).conversationId ) {
+                        if (JSON.parse(data.data).msg.user != $scope.appData.user.id) {
+                            $scope.appData.conversations[i].messages.push(JSON.parse(data.data).msg);
+                        }// new msg from some user
+                    }
+                }
                 //$scope.conversations[data.data.conversationId].messages.push(data.data.msg);
                 break;
             default:
