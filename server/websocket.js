@@ -282,6 +282,6 @@ function notifyMsg(conversation) {
 
 server.on('MethodNotAllowed', unknownMethodHandler);
 
-server.listen(process.env.PORT || 8080, function () {
+server.listen(process.env.PORT || 8080, '127.0.0.1', function () {
     console.log('socket.io server listening at %s', server.url);
 });

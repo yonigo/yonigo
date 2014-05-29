@@ -7,7 +7,7 @@ angular.module('serverConnection', [])
     .factory('serverConnection', ['$http', '$rootScope', '$q', function ($http, $rootScope, $q) {
         var connection = {
 
-            url: 'http://www.yonigo.mobi:8080/',
+            url: 'http://127.0.0.1:8080/',
         	dataToUrl: function(data) {
         		var url='?';
         		for (var i = 0; i < data.length; i++) {
@@ -21,7 +21,7 @@ angular.module('serverConnection', [])
             connectToSocket: function(user) {
 
                 var deferred = $q.defer();
-                connection.socket = io.connect('http://www.yonigo.mobi:8080',{
+                connection.socket = io.connect('http://127.0.0.1:8080',{
                     query: $.param({token: 'ec210b70-e187-11e3-8b68-0800200c9a66'})
                 });
                 var socket = connection.socket;
