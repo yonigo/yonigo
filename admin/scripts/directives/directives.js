@@ -7,6 +7,7 @@ angular.module('directives', ['localization'])
         });
     };
 })
+
 .directive('inputFix', function() {
     return function(scope, elem, attrs) {
         elem.bind('blur', function () {
@@ -14,6 +15,7 @@ angular.module('directives', ['localization'])
         });
     };
 })
+
 .directive('map', function () {
     'use strict';
     return {
@@ -59,7 +61,9 @@ angular.module('directives', ['localization'])
 
         }
     };
-}).directive('scrollFill', function () {
+})
+
+.directive('scrollFill', function () {
     'use strict';
     return {
         restrict: 'A',
@@ -73,7 +77,9 @@ angular.module('directives', ['localization'])
             });
         }
     };
-}).directive('chatWindow', ['$timeout', function ($timeout) {
+})
+
+.directive('chatWindow', ['$timeout', function ($timeout) {
     'use strict';
     return {
         restrict: 'A',
@@ -177,6 +183,7 @@ angular.module('directives', ['localization'])
         }
     };
 }])
+
 .directive('fileUploader', function () {
     'use strict';
     return {
@@ -189,15 +196,14 @@ angular.module('directives', ['localization'])
             element.bind('change', function (event) {
                 var reader = new FileReader();
                 var fileName = event.target.files[0].name;
+                var e = event;
                 reader.onload = function(theFile) {
-                    debugger;
                     var fileStr;
                     if (theFile.srcElement)
                         fileStr = theFile.srcElement.result;
                     else if (theFile.originalTarget)
                         fileStr = theFile.originalTarget.result;
-                    scope.onFileChanged({data: fileStr, name: fileName});
-                    $('#previewImg').attr('src',fileStr);
+                    scope.onFileChanged({data: fileStr, name: fileName, event: e});
                 };
                 reader.readAsDataURL(event.target.files[0]);
             });

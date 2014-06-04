@@ -1,4 +1,8 @@
 'use strict';
+
+window.serverName = 'http://localhost';  // http://www.yonigo.mobi
+window.port = ':8080';
+
 angular.module('serverConnection', [])
     .config(['$httpProvider', function($httpProvider) {
     	$httpProvider.defaults.useXDomain = true;
@@ -7,6 +11,7 @@ angular.module('serverConnection', [])
     .factory('serverConnection', ['$http', '$rootScope', '$q', function ($http, $rootScope, $q) {
         var connection = {
 
+            url: serverName + port + '/',
         	dataToUrl: function(data) {
         		var url='?';
         		for (var i = 0; i < data.length; i++) {
@@ -20,7 +25,7 @@ angular.module('serverConnection', [])
             connectToSocket: function(user) {
 
                 var deferred = $q.defer();
-                connection.socket = io.connect('http://127.0.0.1:8080',{
+                connection.socket = io.connect(serverName + port,{
                     query: $.param({token: 'ec210b70-e187-11e3-8b68-0800200c9a66'})
                 });
                 var socket = connection.socket;
@@ -94,9 +99,18 @@ angular.module('serverConnection', [])
         	register: function(userData) {
                 var data = {data: userData, countryCode: 'IL'};
                 return this.sendHttp('CreatePrivateUser', data, connection.registerUrl);
-        	}
+        	},
+
+            getProjects: function(userData) {
+                return this.sendHttp('get', userData, connection.url + 'project/');
+            },
+
+            getCompanies: function() {
+                return this.sendHttp('get', {},connection.url + 'company/');
+            }
 
         };
+
 
         return connection;
     } ]);

@@ -1,0 +1,64 @@
+<div data-role="content" ng-init="init()" >
+
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation" ng-include src="'views/templates/header.html'"></nav>
+
+    <section class="section-wrapper">
+
+        <div class="projects-empty" ng-hide="!appData.companies || appData.companies.length > 0">
+            <h2>No Available Companies</h2>
+        </div>
+
+        <div ng-show="appData.companies && appData.companies.length > 0">
+            <div class="row projects-header">
+                <div class="col-xs-1">Name</div>
+                <div class="col-xs-4">Short Description</div>
+            </div>
+            <div data-ng-repeat="c in appData.companies" >
+                <div class="row project-row">
+                    <div class="col-xs-1">
+                        <input class="form-control" data-ng-model="c.name" blur="updateCompany(c)">
+                    </div>
+                    <div class="col-xs-4">
+                        <input class="form-control" data-ng-model="c.description" blur="updateCompany(c)">
+                    </div>
+                    <div class="col-xs-1">
+                        <img ng-src="../../{{c.logo}}" style="width:45px;">
+                    </div>
+                    <div class="col-xs-1">
+                        <button type="submit" class="btn btn-success btn-default" data-ng-click="deleteCompany(c)"><span class="glyphicon glyphicon-minus"></span> Delete</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="vertical-divider"></div>
+
+        <div>
+            <form data-role="form" class="form-inline">
+                <div class="form-group">
+                    <label>Add New Company: </label>
+                    <input type="text" class="form-control" placeholder="Company Name" data-ng-model="newCompany.name">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Company Description" data-ng-model="newCompany.description">
+                </div>
+                <div class="form-group">
+                    <div class="file-uploader btn btn-success" style="width:130px;">
+                        <input type="file" file-uploader on-file-changed="onImageFileChanged(data, name, event)" class="">
+                        <span class="glyphicon glyphicon-file"></span>
+                        <span>Company Logo</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div >
+                        <img ng-src="{{newCompany.file.src}}" style="width: 50px;">
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-success btn-default" data-ng-click="addCompany()"><span class="glyphicon glyphicon-plus"></span> Add</button>
+            </form>
+        </div>
+    </section>
+
+</div>
+

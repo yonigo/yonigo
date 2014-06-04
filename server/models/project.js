@@ -7,17 +7,27 @@ var ProjectSchema = new Schema({
     name: {
         type: String
     },
-    shortDesc: String,
-    longDesc: String,
+    shortDescription: String,
+    longDescription: String,
     images:[
         {
             url: String,
             index: Number,
-            type: String
+            imgType: String
         }
     ],
-    testimonies: [Schema.Types.ObjectId],
-    company: Schema.Types.ObjectId,
+    testimonies: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: 'Testimony',
+            required: true
+        }
+    ],
+    company: {
+        type: Schema.Types.ObjectId,
+        ref: 'Company',
+        required: true
+    },
     creationDate: Date,
     tags: [String],
     user: {

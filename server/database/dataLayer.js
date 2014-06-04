@@ -27,10 +27,10 @@ var GenericModel = function(modelName) {
         return deferred.promise;
     };
 
-    this.update = function(params) {
+    this.update = function(obj) {
         var deferred = q.defer();
-        var model = new this.instance(params.body);
-        model.save(function (err, obj) {
+        var model = this.instance;
+        model.findByIdAndUpdate(obj.id, obj.body, function (err, savedObj) {
             if (err) {
                 console.log(err);
                 deferred.reject(err);
@@ -98,9 +98,17 @@ Project.prototype = new GenericModel('project');
 var Conversation = function() {};
 Conversation.prototype = new GenericModel('conversation');
 
+var Company = function() {};
+Company.prototype = new GenericModel('company');
+
+var Testimony = function() {};
+Testimony.prototype = new GenericModel('testimony');
+
 module.exports.user = new User();
 module.exports.project = new Project();
 module.exports.conversation = new Conversation();
+module.exports.company = new Company();
+module.exports.testimony = new Testimony();
 module.exports.toObjectId = function(ids) {
     var arr = [];
     if (Array.isArray(ids)) {

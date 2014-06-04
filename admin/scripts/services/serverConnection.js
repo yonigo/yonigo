@@ -1,4 +1,6 @@
 'use strict';
+window.serverName = 'http://localhost'; // http://www.yonigo.mobi
+window.port = ':8080';
 angular.module('serverConnection', [])
     .config(['$httpProvider', function($httpProvider) {
     	$httpProvider.defaults.useXDomain = true;
@@ -7,7 +9,8 @@ angular.module('serverConnection', [])
     .factory('serverConnection', ['$http', '$rootScope', '$q', function ($http, $rootScope, $q) {
         var connection = {
 
-            url: 'http://127.0.0.1:8080/',
+            url: serverName + port + '/',
+
         	dataToUrl: function(data) {
         		var url='?';
         		for (var i = 0; i < data.length; i++) {
@@ -21,7 +24,7 @@ angular.module('serverConnection', [])
             connectToSocket: function(user) {
 
                 var deferred = $q.defer();
-                connection.socket = io.connect('http://127.0.0.1:8080',{
+                connection.socket = io.connect(serverName + port,{
                     query: $.param({token: 'ec210b70-e187-11e3-8b68-0800200c9a66'})
                 });
                 var socket = connection.socket;
@@ -66,6 +69,8 @@ angular.module('serverConnection', [])
                 return deferred.promise;
             },
 
+            //USERS
+
             addUser: function(userData) {
                 return this.sendHttp('add', userData, connection.url + 'user/');
             },
@@ -73,6 +78,8 @@ angular.module('serverConnection', [])
             login: function(userData) {
                 return this.sendHttp('login', userData, connection.url + 'user/');
             },
+
+            //PROJECTS
 
             addProject: function(projectData) {
                 return this.sendHttp('add', projectData, connection.url + 'project/');
@@ -83,8 +90,55 @@ angular.module('serverConnection', [])
             },
 
             deleteProject: function(project) {
-                return this.sendHttp('delete', project, connection.url + 'project/');
+                return this.sendHttp('delete', {id: project.id}, connection.url + 'project/');
             },
+
+            updateProject: function(obj) {
+                return this.sendHttp('update', obj, connection.url + 'project/');
+            },
+
+            uploadProjectImg: function(project, img) {
+                var obj = {data: img.src, name: img.name, id: project.id, index: img.index, type: img.type};
+                return this.sendHttp('image/add', obj, connection.url + 'project/');
+            },
+
+            removeProjectImage: function(img, project) {
+                return this.sendHttp('image/remove', {imgUrl: img.url, projectId: project.id }, connection.url + 'project/');
+            },
+
+            //TESTIMONIES
+
+            addTestimony: function(testimony) {
+                return this.sendHttp('add', testimony, connection.url + 'testimony/');
+            },
+
+            deleteTestimony: function(testimony) {
+                return this.sendHttp('delete', testimony, connection.url + 'testimony/');
+            },
+
+            updateTestimony: function(obj) {
+                return this.sendHttp('update', obj, connection.url + 'testimony/');
+            },
+
+            //COMPANIES
+
+            addCompany: function(companyData) {
+                return this.sendHttp('add', companyData, connection.url + 'company/');
+            },
+
+            getCompanies: function() {
+                return this.sendHttp('get', {},connection.url + 'company/');
+            },
+
+            deleteCompany: function(company) {
+                return this.sendHttp('delete', {id: company.id}, connection.url + 'company/');
+            },
+
+            updateCompany: function(obj) {
+                return this.sendHttp('update', obj, connection.url + 'company/');
+            },
+
+            //CHATS
 
             getOnlineUsers: function() {
                 connection.socket.emit('getOnlineUsers');

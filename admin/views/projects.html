@@ -9,9 +9,125 @@
         </div>
 
         <div ng-show="appData.projects && appData.projects.length > 0">
-            <div data-ng-repeat="p in appData.projects">
-                {{p.name}}  {{p.id}}
-                <button type="submit" class="btn btn-success btn-default" data-ng-click="deleteProject(p)"><span class="glyphicon glyphicon-minus"></span> Delete</button>
+            <div class="row projects-header">
+                <div class="col-xs-1 col-xs-offset-1">Name</div>
+                <div class="col-xs-4">Short Description</div>
+            </div>
+            <div data-ng-repeat="p in appData.projects" >
+                <div class="row project-row">
+                    <div class="col-xs-1">
+                        <button class="btn btn-primary btn-default" data-ng-click="p.more = !p.more">More</button>
+                    </div>
+                    <div class="col-xs-1">
+                        <input class="form-control" data-ng-model="p.name" blur="updateProject(p)">
+                    </div>
+                    <div class="col-xs-4">
+                        <input class="form-control" data-ng-model="p.shortDescription" blur="updateProject(p)">
+                    </div>
+                    <div class="col-xs-4">
+                    <select data-ng-model="p.company" data-ng-options="c.id as c.name for c in appData.companies" ng-change="updateProject(p)"></select>
+                    </div>
+                    <div class="col-xs-1">
+                        <button type="submit" class="btn btn-success btn-default" data-ng-click="deleteProject(p)"><span class="glyphicon glyphicon-minus"></span> Delete</button>
+                    </div>
+                </div>
+                <div data-ng-show="p.more" class="project-more well">
+
+                    <div class="row">
+                        <div class="col-xs-1 col-xs-offset-1">
+                            Long Description
+                        </div>
+                        <div class="col-xs-4">
+                            <textarea class="form-control" data-ng-model="p.longDescription" blur="updateProject(p)"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="more-section">
+                        <h4 data-ng-click="p.showImages = !p.showImages">
+                            Images
+                        </h4>
+                        <div data-ng-show="!p.images || p.images.length == 0" class="more-section-empty">
+                            No Images
+                        </div>
+                        <div style="white-space: nowrap;overflow-x: auto; padding-bottom: 10px;border-bottom: 1px solid #eee; margin-bottom: 15px;" data-ng-show="p.showImages">
+                            <div data-ng-repeat="img in p.images" class="project-img">
+                                <img src="http://localhost/projects/{{img.url}}">
+                                <button type="submit" class="btn btn-success btn-default" data-ng-click="removeImage(img, p, $parent.$index)"><span class="glyphicon glyphicon-trash"></span></button>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="file-uploader btn btn-success col-xs-2 col-xs-offset-1">
+                                <input type="file" file-uploader on-file-changed="onImageFileChanged(data, name, event)" class="">
+                                <span class="glyphicon glyphicon-file"></span>
+                                <span>Choose File</span>
+                            </div>
+                            <div class="col-xs-1 project-new-img">
+                                <img ng-src="{{newImage.src}}">
+                            </div>
+                            <div class="col-xs-1">
+                                <div select>Type</div>
+                            </div>
+                            <button type="submit" class="btn btn-success btn-default col-xs-1" data-ng-click="uploadProjectImg(p)"><span class="glyphicon glyphicon-plus"></span> Add</button>
+                        </div>
+                    </div>
+
+                    <div class="more-section">
+                        <h4 data-ng-click="p.showImages = !p.showImages">
+                            Tags (Separate by Space )
+                        </h4>
+                        <textarea class="form-control" data-ng-model="p.tags" blur="updateProject(p)"></textarea>
+                    </div>
+
+                    <div class="more-section">
+                        <h4>
+                            Testimonies
+                        </h4>
+                        <div data-ng-show="!p.testimonies || p.testimonies.length == 0" class="more-section-empty">
+                            No Testimonies
+                        </div>
+                        <div class="row" data-ng-repeat="t in p.testimonies">
+                            <div class="col-xs-offset-1 col-xs-1">
+                                <img ng-src="../../{{t.client.imageUrl}}" style="width:45px;">
+                            </div>
+                            <div class="col-xs-1">
+                                <input class="form-control" data-ng-model="t.client.name" blur="updateTestimony(t)">
+                            </div>
+                            <div class="col-xs-1">
+                                <input class="form-control" data-ng-model="t.client.title" blur="updateTestimony(t)">
+                            </div>
+                            <div class="col-xs-7">
+                                <textarea class="form-control" data-ng-model="t.text" blur="updateTestimony(t)"></textarea>
+                            </div>
+                            <div class="col-xs-1">
+                                <button type="submit" class="btn btn-success btn-default" data-ng-click="deleteTestimony(p, t)"><span class="glyphicon glyphicon-minus"></span> Delete</button>
+                            </div>
+                        </div>
+                        <div class="vertical-divider"></div>
+                        <div class="row">
+                            <div class="file-uploader btn btn-success col-xs-2 col-xs-offset-1">
+                                <input type="file" file-uploader on-file-changed="onTestimonyFileChanged(data, name, event)" class="">
+                                <span class="glyphicon glyphicon-file"></span>
+                                <span>Client Image</span>
+                            </div>
+                            <div class="col-xs-1 project-new-img">
+                                <img ng-src="{{p.newTestimony.client.src}}">
+                            </div>
+                            <div class="col-xs-2">
+                                <input class="form-control" data-ng-model="p.newTestimony.client.name" placeholder="Name">
+                            </div>
+                            <div class="col-xs-2">
+                                <input class="form-control" data-ng-model="p.newTestimony.client.title" placeholder="Title">
+                            </div>
+                            <div class="col-xs-4">
+                                <textarea class="form-control" data-ng-model="p.newTestimony.text" placeholder="Text"></textarea>
+                            </div>
+                            <div>
+                                <button type="submit" class="btn btn-success btn-default" data-ng-click="addTestimony(p)"><span class="glyphicon glyphicon-plus"></span> Add</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 

@@ -18,6 +18,11 @@ YoniGo
                 templateUrl: "views/projects.html",
                 controller: "projectsCtrl"
             })
+            .state('companies', {
+                url: "/companies",
+                templateUrl: "views/companies.html",
+                controller: "companiesCtrl"
+            })
             .state('chats', {
                 url: "/chats",
                 templateUrl: "views/chats.html",
@@ -56,6 +61,7 @@ YoniGo
 
         })
         .then( function(response) {
+            $scope.getCompanies();
             deferred.resolve(response);
         }, function(error) {
             $scope.openErrorModel(error);
@@ -81,6 +87,14 @@ YoniGo
             deferred.reject(error);
         });
         return deferred.promise;
+    };
+
+    $scope.getCompanies = function() {
+        serverConnection.getCompanies().then( function(companies) {
+            $scope.appData.companies = companies;
+        }, function(error) {
+            $scope.openErrorModel(error);
+        });
     };
 
     $scope.sendMsg = function(msg, conversation) {
